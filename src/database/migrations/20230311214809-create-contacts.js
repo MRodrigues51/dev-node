@@ -1,6 +1,6 @@
 module.exports = {
   up(queryInterface, Sequelize) {
-    return queryInterface.createTable('contact', {
+    return queryInterface.createTable('contacts', {
       id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -24,7 +24,7 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false
       },
-      custuomer_id: {
+      customer_id: {
         type: Sequelize.INTEGER,
         references: { model: 'customers', key: 'id' },
         onUpdate: 'CASCADE',

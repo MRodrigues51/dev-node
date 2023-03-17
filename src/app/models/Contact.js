@@ -8,6 +8,10 @@ class Contact extends Model {
       status: Sequelize.ENUM('ACTIVE', 'ARCHIVED'),
     }, {
       sequelize,
+      name: {
+        singular: 'contact',
+        plural: 'contacts'
+      }
     })
   }
   static associate(models) {
